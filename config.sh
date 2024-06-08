@@ -27,7 +27,7 @@ set cmdheight=2
 set incsearch
 set hlsearch
 set clipboard=unnamedplus
-colorscheme desert
+colorscheme default
 filetype plugin on
 filetype indent on
 set numberwidth=5
