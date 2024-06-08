@@ -2,7 +2,7 @@ cd /
 
 # installing stuff
 
-sudo apt install git neovim tmux
+sudo apt install gh git neovim tmux
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # neovim config
