@@ -42,5 +42,6 @@ source ~/.bashrc
 # tmux config
 
 echo "set -g mouse on" >> ~/.tmux.conf
+echo "setw -g mode-keys vi" >> ~/.tmux.conf
 echo "bind-key - split-window -v" >> ~/.tmux.conf
 tmux source-file ~/.tmux.conf
