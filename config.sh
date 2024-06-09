@@ -2,18 +2,19 @@ cd /
 
 # installing stuff
 
-sudo apt install build-essential gh git neovim nginx tmux -y
+apt install build-essential certbot python3-certbot-nginx gh git neovim nginx tmux -y
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 
 # neovim config
 # make it in root folder because I'll always be using sudo vim anyway
 
-sudo NVIM_CONFIG_DIR="/root/.config/nvim"
+NVIM_CONFIG_DIR="/root/.config/nvim"
 if [ ! -d "$NVIM_CONFIG_DIR" ]; then
     sudo mkdir -p "$NVIM_CONFIG_DIR"
     echo "Created the Neovim config directory."
 fi
-sudo cat > "$NVIM_CONFIG_DIR/init.vim" << EOF
+cat > "$NVIM_CONFIG_DIR/init.vim" << EOF
 set number
 " set relativenumber
 syntax off " syntax on
@@ -37,10 +38,12 @@ EOF
 # shell-related config
 
 echo "export HISTCONTROL=ignoredups" >> ~/.bashrc
+echo "alias vim='nvim'" >> ~/.bashrc
 source ~/.bashrc
 
 # tmux config
 
+touch ~/.tmux.conf
 echo "set -g mouse on" >> ~/.tmux.conf
 echo "setw -g mode-keys vi" >> ~/.tmux.conf
 echo "bind-key - split-window -v" >> ~/.tmux.conf
