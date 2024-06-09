@@ -2,7 +2,7 @@ cd /
 
 # installing stuff
 
-sudo apt install gh git neovim nginx tmux -y
+sudo apt install build-essential gh git neovim nginx tmux -y
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 # neovim config
