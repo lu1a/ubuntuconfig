@@ -2,7 +2,7 @@ cd /
 
 # installing stuff
 
-apt install build-essential certbot python3-certbot-nginx gh git neovim nginx tmux -y
+apt install build-essential certbot python3-certbot-nginx gh git neovim nginx net-tools tmux -y
 git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
