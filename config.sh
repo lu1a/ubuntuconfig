@@ -17,7 +17,8 @@ fi
 cat > "$NVIM_CONFIG_DIR/init.vim" << EOF
 set number
 " set relativenumber
-syntax off " syntax on
+" syntax off
+syntax on
 set mouse=a
 set tabstop=4
 set shiftwidth=4
@@ -28,12 +29,17 @@ set cmdheight=2
 set incsearch
 set hlsearch
 set clipboard=unnamedplus
-colorscheme default
+" colorscheme default
 filetype plugin on
 filetype indent on
 set numberwidth=5
 set signcolumn=yes
 EOF
+
+mkdir -p ~/.config/nvim/pack/airblade/start
+cd ~/.config/nvim/pack/airblade/start
+git clone https://github.com/airblade/vim-gitgutter.git
+nvim -u NONE -c "helptags vim-gitgutter/doc" -c q
 
 # shell-related config
 
