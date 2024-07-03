@@ -40,6 +40,13 @@ mkdir -p ~/.config/nvim/pack/airblade/start
 cd ~/.config/nvim/pack/airblade/start
 git clone https://github.com/airblade/vim-gitgutter.git
 nvim -u NONE -c "helptags vim-gitgutter/doc" -c q
+cd
+
+mkdir -p ~/.local/share/nvim/site/pack/coc/start
+cd ~/.local/share/nvim/site/pack/coc/start
+git clone --branch release https://github.com/neoclide/coc.nvim.git --depth=1
+nvim -c "helptags coc.nvim/doc/ | q"
+cd
 
 # shell-related config
 
